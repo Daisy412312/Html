@@ -1,0 +1,20 @@
+body{
+    background-color: gray;
+}
+.main-heading,h1{
+    color: blue;
+}
+#content-box{
+    width: 400px;
+    border: 1px solid black;
+}
+#content-box,li{
+    color: green;
+
+}
+h1,p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.urgent{
+    color: red;
+}
