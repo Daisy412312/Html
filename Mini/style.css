@@ -1,0 +1,30 @@
+h2{
+    font-size: 18px;
+}
+.product-card{
+    border: 1px solid black;
+    background-color: cadetblue;
+    padding: 10px;
+    margin: 10px;
+}
+.product-card{
+    font-weight: bold;
+}
+#promo-text{
+    color: red;
+}
+#main-nav li{
+   list-style: none;
+}
+#main-nav ul{
+    background-color: gray;
+    padding: 10px;
+}
+.active-link{
+    color: brown;
+    background-color: white;
+    padding: 5px;
+}
+h1,h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
