@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+p{
+    display: inline;
+    width: 250;
+}
+p{
+    display: inline-block;
+    width: 200px;
+}
+#container{
+    position: relative;
+    z-index: 5;
+}
+#container p:first-child{
+    position: relative;
+    top: 10px;
+}
+#container p:first-child{
+   position: absolute;
+   top: 0;
+   left: 0; 
+}
+#fixed-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: blueviolet;
+    color: aliceblue;
+    padding: 10px;
+    z-index: 10;
+}
+#link-group a{
+    display: block;
+    margin-bottom: 5px;
+}
