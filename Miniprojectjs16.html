@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject16-Js</title>
+</head>
+<body>
+    <script>
+        const productItem = {
+            name: "Laptop",
+            baseprice: 1000,
+            taxRate: 0.05,
+            calculateTaxedprice: function() {
+                return this.baseprice + (this.baseprice * this.taxRate);
+            }
+        };
+
+        const finalPrice = productItem.calculateTaxedprice();
+        console.log(`Final price with tax: $${finalPrice}`);
+
+        const jsonString = JSON.stringify(productItem);
+        console.log(jsonString);
+
+        const userData = {
+            id: "U101",
+            name: "Daisy",
+            preferences: {
+                theme: "dark",
+                Notifications: true
+            },
+            Permissions: ["read", "write", "excute"]
+        };
+
+        const sentDataString = JSON.stringify(userData);
+        console.log("Data sent to server:", sentDataString);
+
+        const serverResponse = `{"status": "success", "code": 200}`;
+
+        const statusObject = JSON.parse(serverResponse);
+        console.log("parsed server response:", statusObject);
+
+        if (statusObject.status === "success") {
+            console.log("Data transfer verified!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject14-Js</title>
+</head>
+<body>
+    <script>
+        function fahrenheitCelsius(fahrenheit) {
+            const celsius = (fahrenheit-32) * 5 / 9;
+            return celsius;
+        }
+
+        const tempF = 68;
+        const tempC = fahrenheitCelsius(tempF);
+        console.log(`${tempF}°F is equal to ${tempC.toFixed(2)}°C`);
+
+        const isValidArray = arr => arr.length > 3;
+
+        function processList(arr) {
+            if (isValidArray(arr)) {
+                console.log(`Array lenth: ${arr.length}`)
+            }else {
+                console.log("List is too short to process.")
+            }
+        }
+
+        const shortArray = [1,2];
+        const longArray = [10, 20, 30, 40, 50];
+        processList(shortArray);
+        processList(longArray);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject15-Js</title>
+</head>
+<body>
+    <script>
+        const employees = [
+            { id: "E101", salary: 55000 },
+            { id: "E102", salary: 75000 },
+            { id: "E103", salary: 62000 },
+        ];
+
+        const highPaidIDs = employees
+         .filter(emp => emp.salary > 60000)
+         .map(emp => emp.id);
+
+         console.log(highPaidIDs);
+
+         const transactions = [
+            { name: "Product A", unitsSold: 10},
+            { name: "Product B", unitsSold: 25},
+            { name: "Product C", unitsSold: 15},
+         ]
+
+         const totalunitsScold = transactions.reduce((total, transactions) => total + transactions.unitsSold, 0);
+         console.log(`Total Units Sold: ${totalunitsScold}`);
+    </script>
+</body>
+</html>
