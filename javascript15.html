@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15-JS</title>
+</head>
+<body>
+    <script>
+        const names = ["Daisy", "Jo", "Sureka"];
+
+        const name = ["Daisy", "Jo", "Sureka"];
+        name.push ("Diana");
+        console.log(name);
+
+        const nam = ["Daisy", "Jo", "Sureka", "Diana"];
+        let removedName = nam.shift();
+        console.log(removedName);
+        console.log(nam);
+
+        const words = ["hello", "world", "js"];
+        const upperWords = words.map(word => word.toUpperCase());
+        console.log(upperWords);
+
+        const data = [10, 5, 20];
+        const result = data.map(num => num + 1);
+        console.log(result);
+
+        const word = ["hello", "world", "js"];
+        const longWords = words.filter(word => word.length > 4);
+        console.log(longWords);
+
+        const temperatures = [32, 10, 25, 40];
+        const res = temperatures.filter(temp => temp < 30);
+        console.log(res);
+
+        const dat = [10, 5, 20];
+        const sum = dat.reduce((total, num) => total + num, 0);
+        console.log(sum);
+
+        const letters = ["A", "B", "C"];
+        const resu = letters.reduce((acc, letter) => acc + letter, "");
+        console.log(resu);
+
+        const temper = [32, 10, 25, 40];
+        const resul = temper
+        .filter(temp => temp < 30)
+        .reduce((sum, temp) => sum + temp, 0);
+        console.log(resul);
+    </script>
+</body>
+</html>

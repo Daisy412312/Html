@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day16-JS</title>
+</head>
+<body>
+    <script>
+        const car = {
+            make: "Toyota",
+            model: "Swift",
+            year: 2024,
+        };
+        console.log(car.make);
+
+        let prop = "year";
+        console.log(car[prop]);
+
+        car.color = "Black";
+        console.log(car);
+
+        engine: {
+            hp: 200
+        }
+        console.log(car);
+
+        const bike = {
+            make: "Honda",
+            model: "Royal Enfield",
+            year: 2025,
+            engine: {
+              hp: 200
+          },
+          describe: function() {
+            return this.make + "" + this.model;
+          }
+        };
+        console.log(bike.engine.hp);
+        console.log(bike.describe());
+
+        const datapoint = { x: 10, y: 20 };
+        const jsonString = JSON.stringify(datapoint);
+        console.log(jsonString);
+
+        const datpoint = { x: 10, y: 20 };
+        const parsedData = JSON.parse(jsonString);
+        console.log(parsedData.x);
+
+        const flight = {
+            make: "Indico",
+            model: "Air India",
+            year: 2026,
+            engine: {
+                hp: 2000
+            },
+            describe: function() {
+                return this.make + "" + this.model;
+            }
+        };
+        const jString = JSON.stringify(flight);
+        console.log(jString);
+
+    </script>
+</body>
+</html>

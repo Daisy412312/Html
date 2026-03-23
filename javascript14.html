@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day14-JS</title>
+</head>
+<body>
+    <script>
+        function logGreeting() {
+            console.log("Hello from the function!");
+        }
+        logGreeting();
+
+        function getpi() {
+            return 3.14159;
+        }
+        console.log(getpi());
+
+        function sayName(name) {
+            console.log("Hello" + name + "!");
+        }
+        sayName("Daisy");
+
+        function multiply(a,b) {
+            return a * b;
+        }
+        console.log(multiply(4,5));
+
+        const subtract = (a,b) => {
+            return a - b;
+        };
+        console.log(subtract(10,4));
+
+        const divide = (a, b) => a / b;
+        console.log(divide(10,2));
+
+        const double = x => x * 2;
+        console.log(double(8));
+
+        const difine = (a, b) => a/b;
+        console.log(difine());
+
+        function sayName(name = "Stranger") {
+            console.log("Hello" + name + "!");
+        }
+        sayName();
+
+        function checkStatus() {
+            return true;
+        }
+
+        let result = checkStatus();
+
+        if (result) {
+            console.log("Access Granted");
+        }
+
+    </script>
+</body>
+</html>

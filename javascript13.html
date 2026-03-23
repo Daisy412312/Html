@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day13-JS</title>
+</head>
+<body>
+    <script>
+
+        for (let i = 1; i <= 5; i++){
+            console.log(i);
+        }
+
+        for (let i = 10; i >= 0; i--){
+            console.log(i);
+        }
+
+
+        const fruits = ["Apple", "Banana", "Cherry"];
+        for (let i = 0; i < fruits.length; i++){
+            console.log(fruits);
+        }
+
+
+        let countdown = 5;
+        while (countdown >= 0) {
+            console.log(countdown);
+            countdown--;
+        }
+
+         let condition = 10;
+         do {
+            console.log(condition);
+         } while (condition < 10);
+
+         const fruity = ["Apple", "Banana", "Cherry"];
+         fruits.forEach((fruity, index) => {
+            console.log(`${index}: ${fruity}`);
+         });
+
+         for (let i = 1; i <= 10; i++) {
+            if (i === 7) {
+                break;
+            }
+            console.log(i);
+         }
+
+         for (let i = 1; i <= 10; i++) {
+            if (i === 7) {
+                continue;
+            }
+            console.log(i);
+         }
+
+         for (let i = 1; i <= 20; i++) {
+            if (i % 2 === 0) {
+                console.log(i + "is even");
+            }
+         }
+         
+    </script>
+</body>
+</html>
