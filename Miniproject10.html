@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    ul,a{
+        display: block;
+        padding: 15px;
+    }
+    .page-layout{
+        display: flex;
+        flex-direction: column;
+    }
+    main,aside{
+        width: 100%;
+    }
+    @media (min-width: 700px){
+        ul{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        a{
+            padding: 5px 10px;
+        }
+    }
+    @media (min-width: 992px){
+        .page-layout{
+            flex-direction: row;
+        }
+        main{
+            width: 70%;
+            order: 1;
+        }
+        aside{
+            width: 30%;
+            border: 2px solid black;
+            order: 2;
+            padding: 10px;
+        }
+    }
+</style>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="page-layout">
+        <main>
+            <h2>My Website</h2>
+            <p>A digital platform where information and other content.</p>
+        </main>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>This is the Sidebar content</p>
+        </aside>
+    </div>
+</body>
+</html>

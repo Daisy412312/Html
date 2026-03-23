@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.calender{
+    display: grid;
+    grid-template-columns: 100px 3fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    gap: 8px;
+    padding: 20px;
+}
+.date-heading{
+    grid-column: 1/3;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 400px;
+}
+.gallery div{
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.featured{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+</style>
+<body>
+    <div class="calender">
+        <h2 class="date-heading">July 10 schedule</h2>
+        <div>Morning</div>
+        <div>Team Meeting</div>
+        <div>Afternoon</div>
+        <div>Project Work</div>
+        <div>Evening</div>
+        <div>Client Call</div>
+    </div>
+
+
+    <br>
+    <div class="gallery">
+        <div class="featured">Featured</div>
+        <div>Item2</div>
+        <div>Item3</div>
+        <div>Item4</div>
+        <div>Item5</div>
+    </div>
+</body>
+</html>
