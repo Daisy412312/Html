@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject19-Js</title>
+</head>
+<body>
+    <label for="phone">phone:</label>
+    <input type="text" id="phone" placeholder="(555) 555-5555">
+
+    <script>
+        function ispasswordstrong(password) {
+            return (
+                password.length >= 8 &&
+                /[A-Z]/.test(password) &&
+                /\d/.test(password)
+            );
+        }
+
+        console.log(ispasswordstrong("password1"));
+        console.log(ispasswordstrong("pass"));
+
+        const PHONE_REGEX = /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/;
+
+        function validatephone(numberString) {
+            return PHONE_REGEX.test(numberString);
+        }
+
+        // function checkphone() {
+        //     const phoneInput = document.getElementById('phone').value;
+        //     const result = validatephone(phoneInput);
+
+        //     document.getElementById('result').textContent = result
+
+        //     ? "Valid phone number ✅" 
+        //     : "Invalid phone number ❌";
+        // }
+    </script>
+</body>
+</html>

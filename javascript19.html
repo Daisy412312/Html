@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day19-JS</title>
+</head>
+<body>
+    <input type="text" id="phone-input" placeholder="Enter Phone Number">
+    <form id="myForm">
+        <input type="text" id="data-input" placeholder="Enter data">
+        <button type="submit">Submit</button>
+    </form>
+    
+
+
+    <script>
+        const DIGIT_REGEX = /^\d+$/;
+
+        console.log(DIGIT_REGEX.test("12345"));
+        console.log(DIGIT_REGEX.test("12345a"));
+
+        function checkMinLength(value, min) {
+            return value.length >= min;
+        }
+
+        console.log(checkMinLength("Hello", 5));
+        console.log(checkMinLength("Hi", 5));
+
+        const form = document.getElementById("myForm");
+        form. addEventListener("submit", function (e) {
+            e.preventDefault();
+            console.log("Form submitted");
+        });
+
+
+          const input = document.getElementById("data-input");
+
+          if (input.value === "") {
+            alert("Field required.");
+          }
+
+          const USERNAME_REGEX = /^[a-z0-9]+$/;
+
+
+          if (!USERNAME_REGEX.test(input.value)) {
+            alert("only lowercase letters and numbers allowed.")
+          }
+
+
+          const ZIP_REGEX = /^\d{5}$/;
+
+          console.log(ZIP_REGEX.test("90210"));
+          console.log(ZIP_REGEX.test("9021"));
+
+
+    </script>
+</body>
+</html>

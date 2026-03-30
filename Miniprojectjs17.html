@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniproject17-Js</title>
+</head>
+<style>
+    .border-highlight {
+        border: 5px solid gold;
+    }
+</style>
+<body>
+    <div id="gallery">
+        <img src="/images/download (4).jpg" alt="" class="gallery-item">
+        <img src="/images/download (5).jpg" alt="" class="gallery-item">
+        <img src="/images/download (4).jpg" alt="" class="gallery-item">
+    </div>
+
+    <div id="output-area">
+    </div>
+
+
+
+    <script>
+
+        const images = document.querySelectorAll(".gallery-item");
+
+        for (let i = 0; i < images.length; i++) {
+            if (i === 0) {
+                images[i]. classList.add("border-highlight");
+            }
+            if (i === 1) {
+                images[i].setAttribute("alt", "Second image");
+            }
+        }
+
+
+        const menuItems = ["Home", "About", "Services", "Contact"];
+
+        const navlist = document.createElement("ul");
+
+        menuItems.forEach(function (item) {
+            const li = document.createElement("li");
+            li.textContent = item;
+            navlist.appendChild(li);
+        });
+
+        document.getElementById("output-area").appendChild(navlist);
+
+    </script>
+</body>
+</html>

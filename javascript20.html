@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day20-JS</title>
+</head>
+<body>
+    <button id="fetch-task-btn">Fetch Task</button>
+    <div id="output"></div>
+
+    <script>
+        const btn = document.getElementById("fetch-task-btn");
+        const output = document.getElementById("output");
+
+        function delaylog() {
+            return new Promise(function (reslove) {
+                setTimeout(function () {
+                    console.log("Promise resloved after 1 second.");
+                    reslove();
+                }, 1000);
+            });
+        }
+
+        delaylog().then(function() {
+            console.log("Then excuted");
+        });
+        
+
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+         .then(function (response) {
+            return response.json();
+         })
+
+         .then(function (data) {
+            console.log(data);
+         });
+
+
+         fetch("https://jsonplaceholder.typicode.com/todos/1")
+         .then(function (response) {
+            console.log(response.status);
+            return response.json();
+         })
+
+         .then(function(data) {
+            console.log(data.title);
+         })
+
+         .catch(function (error) {
+            console.log("error occured.");
+         });
+
+
+         function getTodoTask() {
+            fetch("https://jsonplaceholder.typicode.com/todos/1")
+            .then(function (response) {
+                return response.json();
+            })
+
+            .then(function (data) {
+                output.textContent = data.title;
+            })
+
+            .catch(function() {
+                console.log("error occured.");
+            });
+         }
+
+
+         btn.addEventListener("click", getTodoTask);
+
+         const obj = { id: 5, value: "test" };
+         const str = JSON.stringify(obj);
+         console.log(str);
+
+
+    </script>
+</body>
+</html>

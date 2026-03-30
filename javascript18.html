@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day18-JS</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background-color: grey;
+    }
+    #box{
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin-top: 20px;
+    }
+    #color-btn{
+        position: fixed;
+        /* bottom: 20px; */
+        left: 20px;
+        margin-top: 210px;
+        background-color: pink;
+        border: none;
+        padding: 8px;
+        width: 200px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>
+<body>
+    <button id="color-btn">click</button>
+    <div id="box"></div>
+
+    <input type="text" id="text-input" placeholder="Enter name">
+
+    <form id="myForm">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const btn = document.getElementById("color-btn");
+        const box = document.getElementById("box");
+
+        btn.addEventListener("click", function (){
+            box.style.backgroundColor = "red";
+        });
+
+        const input = document.getElementById("text-input");
+        const form = document.getElementById("myForm");
+
+        input.addEventListener("keyup", function (e) {
+            console.log(e.target.value);
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            console.log("Form submitted");
+        });
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            console.log("Form submission blocked.");
+        });
+
+        box.addEventListener("mouseover", function () {
+            box.style.border = "2px solid black";
+        });
+
+        box.addEventListener("mouseout", function () {
+            box.style.border = "";
+        });
+
+        
+
+
+    </script>
+
+</body>
+</html>
